@@ -1,4 +1,3 @@
-# cnscud
+# 个人相关的一些记录
 
-Hello
-Hello
+* 一些写在 wiki里.
