@@ -30,3 +30,21 @@ tags:
         }
 
 ```
+
+{% highlight Java %}
+        try {
+            if (rs != null) {
+                rs.close();
+            }
+        } finally {
+            try {
+                if (st != null) {
+                    st.close();
+                }
+            } finally {
+                if (conn != null) {
+                    conn.close();
+                }
+            }
+        }
+{% endhighlight %}
