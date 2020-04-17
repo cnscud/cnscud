@@ -2,6 +2,6 @@
 layout: post
 title:  "试试新博客"
 date:   2020-04-16 10:09:44 +0800
-categories: hello
+categories: talk
 ---
 试试用github pages做博客~~~
