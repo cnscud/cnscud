@@ -4,10 +4,12 @@ layout: default
 
 <!-- Page Header -->
 {% if page.background %}
-<header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
-  {% else %}
-  <header class="masthead">
-    {% endif %}
+  {% assign bgimg = page.background %}
+{% else %}
+  {% assign bgimg = "images/bg-m.jpg" %}
+{% endif %}
+
+<header class="masthead" style="background-image: url('{{ bgimg | prepend: site.baseurl | replace: '//', '/' }}')">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
