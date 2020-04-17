@@ -2,6 +2,7 @@
 layout: page
 title: 联系我
 date:   2020-04-17 14:31
+background: '/images/bg-m.jpg'
 description: 
 comments: true
 tags:

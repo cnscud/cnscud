@@ -2,7 +2,7 @@
 layout: page
 title: 关于我
 description: This is what I do.
-background: '/img/bg-about.jpg'
+background: '/images/bg-m.jpg'
 permalink: /about/
 ---
 
