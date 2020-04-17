@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Qt学习: ListView的拖拽
+title: Qt学习-ListView的拖拽
 date:   2020-04-17 15:09
 description: 使用MouseArea和DropArea对ListView拖拽
 comments: true
