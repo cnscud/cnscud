@@ -6,7 +6,7 @@ layout: default
 {% if page.background %}
   {% assign bgimg = page.background %}
 {% else %}
-  {% assign bgimg = "images/bg-m.jpg" %}
+  {% assign bgimg = "/images/bg-m.jpg" %}
 {% endif %}
 
 <header class="masthead" style="background-image: url('{{ bgimg | prepend: site.baseurl | replace: '//', '/' }}')">
