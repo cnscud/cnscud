@@ -37,7 +37,8 @@ Rectangle {
             anchors { left: parent.left; right: parent.right }
             height: content.height
 
-            // Disable smoothed so that the Item pixel from where we started the drag remains under the mouse cursor
+            // Disable smoothed so that the Item pixel 
+            // from where we started the drag remains under the mouse cursor
             drag.smoothed: false
 
 
