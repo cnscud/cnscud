@@ -14,7 +14,9 @@ tags:
 想起了当年用Delphi, 差不多一样的东西, 不过那是2000了. Delphi也是不争气啊, 多好的IDE, 硬生生发展不起来..... 
 
 
-```qml
+代码可以在 <https://github.com/cnscud/learn/tree/master/qt/dragdroplistview> 找到
+
+```QML
 /**
   samples changed from Qt tutorial "dynamicview3"
 */
@@ -131,7 +133,8 @@ Rectangle {
 
 
 用的PetModels如下: 
-```qml
+
+```QML
 import QtQuick 2.0
 
 ListModel {
