@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Qt: 可编辑的ListView
+title: Qt-可编辑的ListView
 date:   2020-04-18 21:01
 description: 一个ListView, 使用Text/TexInput
 categories: qt
