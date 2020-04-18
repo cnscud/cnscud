@@ -16,7 +16,7 @@ tags:
 
 代码可以在 <https://github.com/cnscud/learn/tree/master/qt/dragdroplistview> 找到
 
-```QML
+```qml
 /**
   samples changed from Qt tutorial "dynamicview3"
 */
@@ -134,7 +134,7 @@ Rectangle {
 
 用的PetModels如下: 
 
-```QML
+```qml
 import QtQuick 2.0
 
 ListModel {

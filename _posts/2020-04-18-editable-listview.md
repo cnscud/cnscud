@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 
 主界面main.qml如下
 
-```QML
+```qml
 import QtQuick 2.12
 import QtQuick.Window 2.12
 
@@ -57,7 +57,7 @@ Window {
 
 用到的Model文件如下: 
 
-```QML
+```qml
 import QtQuick 2.0
 
 ListModel {
@@ -81,7 +81,7 @@ ListModel {
 
 主要界面:
 
-```QML
+```qml
 import QtQuick 2.12
 import QtQuick.Controls 2.5
 import QtQuick.Layouts 1.3
