@@ -25,3 +25,5 @@ plugins:
 
 exclude:
   - cnscud.github.io.iml
+  - TODO.md
+
