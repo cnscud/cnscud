@@ -55,7 +55,7 @@ Window {
 }
 ```
 
-用到的Model文件如下: 
+用到的Model文件 MyModel.qml 如下: 
 
 ```qml
 import QtQuick 2.0
@@ -79,7 +79,7 @@ ListModel {
 
 ```
 
-主要界面:
+主要界面 DemoList.qml :
 
 ```qml
 import QtQuick 2.12
