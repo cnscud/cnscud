@@ -1,6 +1,6 @@
 ---
 layout: post
-title: QT 如何在调试时能进入源码方式
+title: QT 如何在调试时能进入源码方式(MacOS)
 date:   2020-04-24 15:01
 description: 其实很简单, 你总是搞不对
 categories: qt
