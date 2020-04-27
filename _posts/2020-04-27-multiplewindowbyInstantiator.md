@@ -13,7 +13,7 @@ tags:
 * QML里面的hashmap: QQmlPropertyMap
 
 
-上一次说到用 QQmlApplicationEngine 多次load的方式创建多个一级窗口 [详见这里](https://blog.cnscud.com/qt/2020/04/26/multiplewindows.html), 
+上一次说到用 QQmlApplicationEngine 多次load的方式创建多个一级窗口 [详见这里](https://blog.cnscud.com/qt/2020/04/26/multiplewindows.html){:target="_blank"}, 
 但是窗口数据需要自己设置, 不如Model设置方式方便, 窗口如果比较复杂, 数据设置起来比较麻烦,而且管理窗口也会比较麻烦.  
 
 这里就说说用 Instantiator 这个QML里面的组件, 这个组件是根据模版用来动态创建多个QML组件的 
@@ -207,8 +207,8 @@ private:
 * 用QList做Model, 在QML里面调用modelData.xxx
 * 用QAbstractListModel的子类做Model, 在QML里面调用model.xxx
 
-官方说明详见 <https://doc.qt.io/qt-5/qtquick-modelviewsdata-cppmodels.html>
+官方说明详见 <https://doc.qt.io/qt-5/qtquick-modelviewsdata-cppmodels.html>{:target="_blank"}
 
   
 ### 更详细的请查看项目源码
-<https://github.com/cnscud/learn/tree/master/qt/windowByInstantiator>
+<https://github.com/cnscud/learn/tree/master/qt/windowByInstantiator>{:target="_blank"}
