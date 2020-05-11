@@ -5,8 +5,9 @@ date:   2020-05-11 16:32
 description: 
 categories: macos
 comments: true
-tags: macos,uninstall
-- 
+tags: 
+- macos,uninstall
+ 
 ---
 最近看看磁盘觉得有点小, 就整理了一下, 经过一番折腾, 发现MacOS卸载软件可真是不省心啊. 从应用里移到垃圾桶仅仅是第一步, 当然对于不读写任何文件的应用也许就可以了.
 
