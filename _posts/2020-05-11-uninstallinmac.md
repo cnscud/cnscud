@@ -15,6 +15,8 @@ tags:
  
  以下仅为示例, 是我测试安装一个软件时候的, 结果留下一大堆垃圾, 要是处女座还不得哭死...
 
+* /Library/Caches/ 缓存文件
+* ~/Library/Caches/ 缓存文件
 * /Library/Application Support/*** Tracker 365  文件存储目录
 * ~/Library/Application Support/*** Tracker 365 文件存储目录
 * /Library/Preferences/com.equinux.***Tracker365.plist 配置
@@ -23,7 +25,6 @@ tags:
 * /Library/LaunchDaemons/com.equinux.***Tracker365.agent.plist 系统启动
 * /Library/Extensions/com.equinux.***Tracker365.* 系统扩展(例如驱动, 网络等等)
 * /System/Library/Extensions 系统扩展
-* /Library/Caches/ 缓存文件
 
 
 到处都能看到各种CleanApp, CleanMac, MacBooster, 苹果怎么不出一个卸载工具哪....
