@@ -13,7 +13,7 @@ tags:
 
 有一点注意 Host 的名字和 HostName改为一致. 因为从git仓库复制的地址是全程.
 
-```shell script
+```bash
 Host code.aliyun.com
   HostName code.aliyun.com
   User git
