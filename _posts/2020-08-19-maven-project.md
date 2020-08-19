@@ -2,12 +2,13 @@
 layout: post
 title: Maven项目思考&实战
 date:   2020-08-19 20:15
-description: 
+description: Maven项目思考和实战分析
 categories: maven,java
 comments: true
 tags:
 - maven
 ---
+参考了网络上很多文章, 特此感谢.
 
 ## Maven项目规范
 * 同一项目中所有模块版本保持一致
