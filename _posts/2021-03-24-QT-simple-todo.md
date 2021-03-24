@@ -1,8 +1,8 @@
 ---
 layout: post 
-title: 用QT写的简单记事本程序(源码) 
+title: 用QT写的简单记事本-附源码(浮动窗口) 
 date:   2021-03-24 15:25 
-description: 一个简单的记事本桌面程序 
+description: 一个简单的记事本桌面程序 (浮动窗口)
 categories: qt 
 comments: true 
 tags:
