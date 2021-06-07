@@ -86,6 +86,7 @@ fi
 
 findinstance=0
 myinstanceId="$hostName:$serviceName:$servicePort"
+realinstanceId=""
 
 i=1
 while true;
@@ -93,13 +94,15 @@ do
   xmllint --xpath "//instance[$i]/app/text()" eureka.xml >> /dev/null 2>&1
   if [ $? -eq 0 ]; then
     appName=$(xmllint --xpath "//instance[$i]/app/text()" eureka.xml)
+    lowcaseAppName=$(echo "$appName" | tr '[:upper:]' '[:lower:]')
     ipAddr=$(xmllint --xpath "//instance[$i]/ipAddr/text()" eureka.xml)
     port=$(xmllint --xpath "//instance[$i]/port/text()" eureka.xml)
     instanceId=$(xmllint --xpath "//instance[$i]/instanceId/text()" eureka.xml)
     echo "instance: $appName $ipAddr $port --> $instanceId"
 
-    if [ "$instanceId" == "$myinstanceId" ]; then
+    if [ "$ipAddr:$lowcaseAppName:$port" == "$myinstanceId" ]; then
       findinstance=1
+      realinstanceId=$instanceId
     fi
   else
     break
@@ -113,12 +116,12 @@ if [ $findinstance -eq 0 ]; then
   echo "not find your instance: $myinstanceId"
   exit
 else
-  echo "find your instance: $myinstanceId"
+  echo "find your instance: $myinstanceId --> $realinstanceId"
 fi
 
 
 
-curl -X PUT "$eurekaHost/eureka/apps/$serviceName/$instanceId/metadata?$metakey=$metavalue"
+curl -X PUT "$eurekaHost/eureka/apps/$serviceName/$realinstanceId/metadata?$metakey=$metavalue"
 
 
 if [ $? -eq 0 ]; then
