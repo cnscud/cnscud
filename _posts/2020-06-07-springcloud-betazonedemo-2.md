@@ -213,5 +213,6 @@ logging:
 
 点击访问 http://localhost:9001/remote/id/2 或 http://localhost:9002/remote/id/2 则可以看到我们刚刚运行的服务.
 
+项目代码: https://github.com/cnscud/javaroom/tree/main/betazone2/hello-remotename
 
 接下来我们看看使用gateway代理服务的效果...
