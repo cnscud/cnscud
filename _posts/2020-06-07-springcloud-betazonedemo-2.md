@@ -9,6 +9,13 @@ tags:
 - Spring, Spring Cloud, Zone
 
 ---
+章节:
+* [Spring Cloud分区发布实践(1)](/springcloud/2021/06/07/springcloud-betazonedemo-1.html)
+* [Spring Cloud分区发布实践(2)](/springcloud/2021/06/07/springcloud-betazonedemo-2.html)
+* [Spring Cloud分区发布实践(3)](/springcloud/2021/06/07/springcloud-betazonedemo-3.html)
+* [Spring Cloud分区发布实践(4)](/springcloud/2021/06/07/springcloud-betazonedemo-4.html)
+
+
 我们准备一下用于查询姓名的微服务.
 
 首先定义一下服务的接口, 新建一个空的Maven模块hello-remotename-core, 里面新建一个类: 

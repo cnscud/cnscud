@@ -9,6 +9,14 @@ tags:
 - Spring, Spring Cloud, Zone
 
 ---
+章节:
+* [Spring Cloud分区发布实践(1)](/springcloud/2021/06/07/springcloud-betazonedemo-1.html)
+* [Spring Cloud分区发布实践(2)](/springcloud/2021/06/07/springcloud-betazonedemo-2.html)
+* [Spring Cloud分区发布实践(3)](/springcloud/2021/06/07/springcloud-betazonedemo-3.html)
+* [Spring Cloud分区发布实践(4)](/springcloud/2021/06/07/springcloud-betazonedemo-4.html)
+
+
+
 上面看到直接通过网关访问微服务是可以实现按区域调用的, 那么微服务之间调用是否也能按区域划分哪?
 
 下面我们使用FeignClient来调用微服务, 就可以配合LoadBalancer实现按区域调用.

@@ -9,8 +9,14 @@ tags:
 - Spring, Spring Cloud, Zone
 
 ---
+章节:
+* [Spring Cloud分区发布实践(1)](/springcloud/2021/06/07/springcloud-betazonedemo-1.html)
+* [Spring Cloud分区发布实践(2)](/springcloud/2021/06/07/springcloud-betazonedemo-2.html)
+* [Spring Cloud分区发布实践(3)](/springcloud/2021/06/07/springcloud-betazonedemo-3.html)
+* [Spring Cloud分区发布实践(4)](/springcloud/2021/06/07/springcloud-betazonedemo-4.html)
 
-* 注意: 因为涉及到配置测试切换, 中间环节需按此文章操作体验, 代码仓库里面的只有最后一步的代码
+
+**注意: 因为涉及到配置测试切换, 中间环节需按此文章操作体验, 代码仓库里面的只有最后一步的代码**
 
 准备好了微服务, 那我们就来看看网关+负载均衡如何一起工作
 

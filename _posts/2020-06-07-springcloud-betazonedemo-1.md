@@ -9,6 +9,12 @@ tags:
 - Spring, Spring Cloud, Zone
 
 ---
+章节:
+* [Spring Cloud分区发布实践(1)](/springcloud/2021/06/07/springcloud-betazonedemo-1.html)
+* [Spring Cloud分区发布实践(2)](/springcloud/2021/06/07/springcloud-betazonedemo-2.html)
+* [Spring Cloud分区发布实践(3)](/springcloud/2021/06/07/springcloud-betazonedemo-3.html)
+* [Spring Cloud分区发布实践(4)](/springcloud/2021/06/07/springcloud-betazonedemo-4.html)
+
 
 最近研究了一下Spring Cloud里面的灰度发布, 看到各种各样的使用方式, 真是纷繁复杂, 眼花缭乱, 不同的场景需要不同的解决思路.
 
