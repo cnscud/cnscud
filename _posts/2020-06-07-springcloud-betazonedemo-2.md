@@ -11,7 +11,7 @@ tags:
 ---
 我们准备一下用于查询姓名的微服务.
 
-首先定义一下服务的接口, 新建一个空的Maven模块, 里面新建一个类: 
+首先定义一下服务的接口, 新建一个空的Maven模块hello-remotename-core, 里面新建一个类: 
 ```java
 public interface RemoteNameService {
 
@@ -22,7 +22,7 @@ public interface RemoteNameService {
 接下来的微服务都实现这个简单的接口作为示范.
 
 
-然后创建一个服务模块, 依然使用 Spring Initializr, 选择 "Spring Web", "Eureka Discovery Client" 2个模块.
+然后创建一个服务模块hello-remotename, 依然使用 Spring Initializr, 选择 "Spring Web", "Eureka Discovery Client" 2个模块.
 
 其中的pom文件如下:
 ```xml
@@ -205,7 +205,7 @@ logging:
 ```
 此实例设置端口为9002, 服务区域为 beta.
 
-启动第一个Application, 然后Copy配置, 修改profile为beta , 启动第二个实例.
+启动第一个Application, 然后复制配置, 修改profile为beta , 启动第二个实例.
 
 此时去Eureka查看, 可以看到betazone-hello-remotename有2个服务, 使用xml查看 http://localhost:8001/eureka/apps , 可以看到不同的metadata.
 

@@ -1,0 +1,29 @@
+title:              飞云~风之谷
+email:              cnscud#gmail.com
+description:        山谷里鸟语花香,溪水潺潺. 我们就在这里~~~
+author:             飞云
+baseurl:            "/"
+url:                "http://web.cnscud.com"
+
+# Social Profiles
+twitter_username:   cnscud
+github_username:    cnscud
+facebook_username:
+linkedin_username:
+
+# Add your google-analytics ID here to activate google analytics
+google_analytics:
+
+# Build settings
+markdown:           kramdown
+paginate:           20
+paginate_path:      "/posts/page:num/"
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap
+
+exclude:
+  - cnscud.github.io.iml
+  - TODO.md
+

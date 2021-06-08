@@ -141,12 +141,6 @@ spring:
           lowerCaseServiceId: true
           enabled: true
       routes:
-        - id: default
-          uri: lb://betazone-hello-nameservice
-          predicates:
-            - Path=/api/**
-          filters:
-            - StripPrefix=1
         - id: remotename
           uri: lb://betazone-hello-remotename
           predicates:
@@ -223,7 +217,7 @@ spring:
 
 ## 5. 定制ServiceInstanceListSupplier
 
-我们先直接抄袭一份出来, 作为我们自己的实现(个性化实现代码不同, 但是流程一样, 这里主要演示流程)
+我们先直接抄袭一份出来, 作为我们自己的实现(个性化实现代码不同, 但是流程一样, 这里主要跑通流程)
 
 ```java
 /**
@@ -248,7 +242,7 @@ public class CustomLoadBalancerConfiguration {
 
 这里直接就是从 zonePreferenceDiscoveryClientServiceInstanceListSupplier 抄袭过来的, 我们主要先演示一下流程, 后面我们会实现自己的ServiceInstanceListSupplier.
 
-声明配置一遍生效: 
+声明配置以便生效: 
 ```java
 @Configuration(proxyBeanMethods = false)
 @LoadBalancerClients(defaultConfiguration = CustomLoadBalancerConfiguration.class)
@@ -260,6 +254,11 @@ public class SamezoneAutoConfiguration {
 注释掉yml里面的 configurations: zone-preference, 其他不修改, 重新启动8801, 8802端口, 重新测试.
 
 效果和上面一样, 说明通过类的方式也同样效果, 只不过我们可以使用自己定制的ServiceInstanceListSupplier 了.
+
+* 注意:
+**zone设置优先以 eureka.instance.metadata-map.zone  为首要设置, 没有特殊情况下不要设置spring.cloud.loadbalancer.zone, 这样loadbalancer就会读取实例的zone.**
+  
+
 
 代码位置: https://github.com/cnscud/javaroom/tree/main/betazone2/hello-gateway  注意代码只是最后一步的情况
 
