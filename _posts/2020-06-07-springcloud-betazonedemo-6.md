@@ -290,7 +290,7 @@ HttpHeaders headers = ((RequestDataContext) request.getContext()).getClientReque
 
 检查完成, 使用命中的列表进行轮询...如果没有实例, 则使用所有实例进行轮询.
 
-###实例化LoadBalancer(为了复用, 放在hello-pubtool模块里) 
+##### 实例化LoadBalancer(为了复用, 放在hello-pubtool模块里) 
 ```java
 
 /**
@@ -312,7 +312,7 @@ public class MyBetaMainByHeaderLoadBalancerConfiguration {
 }
 ```
 
-###声明配置(在hello-mybalancerbyheader模块里使用):
+##### 声明配置(在hello-mybalancerbyheader模块里使用):
 ```java
 
 /**
@@ -337,7 +337,7 @@ World [remotename: 127.0.0.1:9002]
 
 发现返回的都是beta区域的实例, 说明代码正确.
 
-##Feign实现根据Header访问不同区域的实例
+## Feign实现根据Header访问不同区域的实例
 第一步都是简单的, 我们看看Feign如何也能继承上一层的效果哪? 启用同样的LoadBalancer, 但是从哪读Header哪, 因为不是同一个Request, 显然是读不到的.
 
 为了把代码区分出来, 不破坏原来的例子, 我们复制一个hello-nameservice模块到 hello-nameservicebyheader.
@@ -358,7 +358,7 @@ public class LoadBalancerByHeaderAutoConfiguration {
 
 然后我去网上搜了搜, 读了5*5=25篇文章之后.....中间过程省略50000字......
 
-### 实现个Feign的拦截器
+##### 实现个Feign的拦截器
 
 我们先看看原来的Controller代码,
 
@@ -383,7 +383,7 @@ public class LoadBalancerByHeaderAutoConfiguration {
 
 因为不知道服务什么情况下会被调用, 有可能是异步, 有可能是线程池, 有可能....总之, 此处省略10000字, 我们实现一个:
 
-### 实现一个Holder, 存放变量
+##### 实现一个Holder, 存放变量
 ```java
 
 
@@ -431,7 +431,7 @@ public class RequestHeaderHolder {
     RequestHeaderHolder.set(request.getHeader("workzone"));
 ```
 
-此处实现一个拦截器:
+##### 此处实现一个拦截器:
 ```java
 
 /**
@@ -507,7 +507,7 @@ hello World [remotename: 127.0.0.1:9002] [nameservice:127.0.0.1:8203]
 
 返回的一直是beta区域的实例.
 
-### 来个Web Filter
+##### 来个Web Filter
 
 我们回想一下, 刚才
 ```java
@@ -599,5 +599,5 @@ hello World [remotename: 127.0.0.1:9002] [nameservice:127.0.0.1:8203]
 
 感谢网上的各种文章, 太多了, 就不一一贴出来了. (很多写的不全, 过时, 所以读的时候也很费劲, 知识爆炸的时代学习成本也很高, 选择多了也不见得都是好事, 当然也是好事)
 
-##
+## 感谢
 感谢感谢, 感谢帮助我的朋友, 家人. 感谢你们. 2021.6.10
