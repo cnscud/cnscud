@@ -1,6 +1,6 @@
 ---
 layout: post 
-title: Spring Cloud分区发布实践(5)--灰度服务-根据Header选择实例区域
+title: Spring Cloud分区发布实践(6)--灰度服务-根据Header选择实例区域
 date:   2021-06-07 17:35 
 description: Spring Cloud分区发布实践 
 categories: springcloud 
@@ -123,7 +123,7 @@ logging:
 
 ```
 
-代理了后面的betazone-hello-remotename服务, 启动, 访问 <http://localhost:9200/remoteapi/remote/id/2> 说明正常, 后面实例是不停轮询的方式来变化的.
+代理了后面的betazone-hello-remotename服务, 启动, 访问 <http://localhost:9200/remoteapi/remote/id/2>{:target="_blank"}  说明正常, 后面实例是不停轮询的方式来变化的.
 
 
 那我们来如何根据header访问后面不同的实例哪? 方法有很多, 我们采用最简洁的办法, 抄袭一个Spring自己的 RoundRobinLoadBalancer, 😅
@@ -290,7 +290,7 @@ HttpHeaders headers = ((RequestDataContext) request.getContext()).getClientReque
 
 检查完成, 使用命中的列表进行轮询...如果没有实例, 则使用所有实例进行轮询.
 
-实例化LoadBalancer(为了复用, 放在hello-pubtool模块里) 
+###实例化LoadBalancer(为了复用, 放在hello-pubtool模块里) 
 ```java
 
 /**
@@ -312,7 +312,7 @@ public class MyBetaMainByHeaderLoadBalancerConfiguration {
 }
 ```
 
-声明配置(在hello-mybalancerbyheader模块里使用):
+###声明配置(在hello-mybalancerbyheader模块里使用):
 ```java
 
 /**
@@ -595,6 +595,9 @@ hello World [remotename: 127.0.0.1:9002] [nameservice:127.0.0.1:8203]
 每个人的情况都不一样, 不同的组件, 不同的实现方式, 都可能造成不一样的效果, 所以仅供参考, 学到手才算真的好!
 
 
-所有教程里的项目源码: <https://github.com/cnscud/javaroom/tree/main/betazone2>
+所有教程里的项目源码: <https://github.com/cnscud/javaroom/tree/main/betazone2>{:target="_blank"}
 
 感谢网上的各种文章, 太多了, 就不一一贴出来了. (很多写的不全, 过时, 所以读的时候也很费劲, 知识爆炸的时代学习成本也很高, 选择多了也不见得都是好事, 当然也是好事)
+
+##
+感谢感谢, 感谢帮助我的朋友, 家人. 感谢你们. 2021.6.10
