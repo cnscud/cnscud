@@ -216,12 +216,12 @@ logging:
 
 启动第一个Application, 然后复制配置, 修改profile为beta , 启动第二个实例.
 
-此时去Eureka查看, 可以看到betazone-hello-remotename有2个服务, 使用xml查看 http://localhost:8001/eureka/apps , 可以看到不同的metadata.
+此时去Eureka查看, 可以看到betazone-hello-remotename有2个服务, 使用xml查看 <http://localhost:8001/eureka/apps>{:target="_blank"} , 可以看到不同的metadata.
 
 ![控制台](/img/springcloud/spring-services-dashboard.jpg ) 
 
-点击访问 http://localhost:9001/remote/id/2 或 http://localhost:9002/remote/id/2 则可以看到我们刚刚运行的服务.
+点击访问 <http://localhost:9001/remote/id/2>{:target="_blank"} 或 <http://localhost:9002/remote/id/2>{:target="_blank"} 则可以看到我们刚刚运行的服务.
 
-项目代码: https://github.com/cnscud/javaroom/tree/main/betazone2/hello-remotename
+项目代码: <https://github.com/cnscud/javaroom/tree/main/betazone2/hello-remotename>{:target="_blank"}
 
 接下来我们看看使用gateway代理服务的效果...

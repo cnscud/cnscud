@@ -17,5 +17,8 @@ tags:
 * [Spring Cloud分区发布实践(5) 定制ServiceInstanceListSupplier](/springcloud/2021/06/07/springcloud-betazonedemo-5.html)
 * [Spring Cloud分区发布实践(6) 根据Header选择实例区域](/springcloud/2021/06/07/springcloud-betazonedemo-6.html)
 
+
+此文是一个完整的例子, 包含可运行起来的源码.
+
 ...... coming soon
 

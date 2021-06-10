@@ -132,7 +132,7 @@ tags:
 
 然后我们来启动一个Eureka作为我们的服务注册中心.
 
-新建一个Module, 名字为 eureka-server, 使用IDE的Spring Initializr, 也可以使用 https://start.spring.io/ 创建.
+新建一个Module, 名字为 eureka-server, 使用IDE的Spring Initializr, 也可以使用 <https://start.spring.io/>{:target="_blank"} 创建.
 
 ![Spring Initializr](/img/springcloud/newmodule.jpg )
 
@@ -192,7 +192,7 @@ eureka:
 
 ```
 
-然后就可以启动了, 访问 http://localhost:8001/ 就可以看到WEB界面, http://localhost:8001/eureka/apps 可以看到详细的xml内容, 可以用来验证metadata是否设置正确.
+然后就可以启动了, 访问 <http://localhost:8001/>{:target="_blank"} 就可以看到WEB界面, <http://localhost:8001/eureka/apps>{:target="_blank"} 可以看到详细的xml内容, 可以用来验证metadata是否设置正确.
 
 
 然后接下来我们准备用于测试的微服务...

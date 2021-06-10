@@ -123,7 +123,7 @@ logging:
 
 ```
 
-启动应用, 访问 http://localhost:8800/remoteapi/remote/id/2, 刷新几次浏览器, 可以看到内容在 
+启动应用, 访问 <http://localhost:8800/remoteapi/remote/id/2>{:target="_blank"}, 刷新几次浏览器, 可以看到内容在 
 
 "World [remotename: 127.0.0.1:9001]"
 "World [remotename: 127.0.0.1:9002]"
@@ -178,7 +178,7 @@ logging:
 
 ```
 
-修改了eureka.instance.metadata-map.zone 为main, 端口改为8801, 按此配置启动应用, 访问 http://localhost:8801/remoteapi/remote/id/2
+修改了eureka.instance.metadata-map.zone 为main, 端口改为8801, 按此配置启动应用, 访问 <http://localhost:8801/remoteapi/remote/id/2>{:target="_blank"}
 
 发现和第一种情况一样, zone没有生效, 说明默认的LoadBalancer没有考虑zone配置.
 
@@ -194,7 +194,7 @@ spring:
       configurations: zone-preference
 ```
 
-重新运行, 访问 http://localhost:8801/remoteapi/remote/id/2
+重新运行, 访问 <http://localhost:8801/remoteapi/remote/id/2>{:target="_blank"}
 
 现在生效了, 服务总是返回 "World [remotename: 127.0.0.1:9001]" , 不再返回端口 9002的信息了, 说明 zone区域设置生效了.
 
@@ -218,7 +218,7 @@ spring:
       configurations: zone-preference
 ```
 
-复制配置, 修改profile为beta, 启动实例, 访问 http://localhost:8802/remoteapi/remote/id/2, 则可以看到总是输出 "World [remotename: 127.0.0.1:9002]", 说明beta区域设置生效了.
+复制配置, 修改profile为beta, 启动实例, 访问 <http://localhost:8802/remoteapi/remote/id/2>{:target="_blank"}, 则可以看到总是输出 "World [remotename: 127.0.0.1:9002]", 说明beta区域设置生效了.
 
 此时我们可以看到如何使用内置的 "zone-preference"了, 那么我们如何自己定义个性化的策略哪, 我们可以看到Spring的这个配置指向 LoadBalancerClientConfiguration, 打开源码, 
 可以看到里面有好多的discoveryClientServiceInstanceListSupplier实现, 我们自己实现(抄袭)一个不就可以了吗?
@@ -268,7 +268,7 @@ public class SamezoneAutoConfiguration {
   
 
 
-代码位置: https://github.com/cnscud/javaroom/tree/main/betazone2/hello-gateway  注意代码只是最后一步的情况
+代码位置: <https://github.com/cnscud/javaroom/tree/main/betazone2/hello-gateway>{:target="_blank"}  注意代码只是最后一步的情况
 
 
 接下来我们实验一下连锁调用的情况下, zone配置会不会被继承传递哪? 什么情况下会失效哪? ......

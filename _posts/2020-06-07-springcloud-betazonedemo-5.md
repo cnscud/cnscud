@@ -247,6 +247,8 @@ public class SameZoneSpecialBetaServiceInstanceListSupplier implements ServiceIn
 * [修改Eureka的metadata脚本](/springcloud/2021/06/07/eureka-update-metadata.html)
 
 
+本文源码: <https://github.com/cnscud/javaroom/tree/main/betazone2/hello-pubtool>{:target="_blank"}
+
 ## 比较
 灰度发布肯定还有很多方案, 但是对于作者来说, 根据zone来做分区灰度发布, 可能这是最简单的一种方式了, 实现简单, 通过Nginx做简单的设置分流到2组网关上, 就可以实现2组实例了.
 

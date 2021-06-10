@@ -206,7 +206,7 @@ logging:
 
 ```
 
-启动应用, 访问 http://localhost:8101/remote/id/2 , 正常情况下, 访问到的remotename服务是不确定的, 9001或者9002, 看来还是需要做一些设置才能按区域生效.
+启动应用, 访问 <http://localhost:8101/remote/id/2>{:target="_blank"} , 正常情况下, 访问到的remotename服务是不确定的, 9001或者9002, 看来还是需要做一些设置才能按区域生效.
 
 通用, 回想上一节的内容, 我们使用zone-preference 或者自定义ServiceInstanceListSupplier都可以实现, 这里不在重复.
 
@@ -269,9 +269,9 @@ logging:
 
 这样网关就代理了betazone-hello-nameservice服务, 路径为/api . 重新启动三个gateway应用的实例, 试着访问
 
-* 默认实例(无区域设置) http://localhost:8800/api/remote/id/2 , 发现背后的2个微服务都在轮询.
-* main实例(区域为main)  http://localhost:8801/api/remote/id/2 发现背后的2个微服务只调用了区域为main的实例, 区域可以继承.
-* beta实例(区域为beta) http://localhost:8802/api/remote/id/2 发现背后的2个微服务只调用了区域为beta的实例, 区域可以继承.
+* 默认实例(无区域设置) <http://localhost:8800/api/remote/id/2>{:target="_blank"} , 发现背后的2个微服务都在轮询.
+* main实例(区域为main)  <http://localhost:8801/api/remote/id/2>{:target="_blank"} 发现背后的2个微服务只调用了区域为main的实例, 区域可以继承.
+* beta实例(区域为beta) <http://localhost:8802/api/remote/id/2>{:target="_blank"} 发现背后的2个微服务只调用了区域为beta的实例, 区域可以继承.
 
 到此, 我们的目的达到, 可以按区域来划分服务了.
 
@@ -285,7 +285,7 @@ logging:
 假设我们有个网站, 正常访问是 http://www.cnscud.com , 线上预发布时 http://beta.cnscud.com , 就可以设置两个区域, 通过Nginx映射, 就可以映射到不同的网关, 就自然可以区分了.
 
 
-项目源码: https://github.com/cnscud/javaroom/tree/main/betazone2
+项目源码: <https://github.com/cnscud/javaroom/tree/main/betazone2>{:target="_blank"}
 
 
 接下来我们试试定制自己的自己定制一下ServiceInstanceListSupplier ......
