@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Dubbo 实现一个Load Balance (灰度发布)
+title: Dubbo 实现一个Load Balance (用于灰度发布)
 date:   2021-06-21 11:58
 description: Dubbo 实现一个Route Factory
 categories: dubbo
