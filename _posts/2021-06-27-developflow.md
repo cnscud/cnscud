@@ -65,7 +65,7 @@ tags:
 * 报警: 短信, 钉钉, 企业微信等等
 
 
-2021.6.27 by Felix 用Markdown写这篇文章好累...
+2021.6.27 by Felix 用Markdown写这篇文章用表格好麻烦...
 
 
 
