@@ -9,5 +9,5 @@ comments: true
 tags:
 - 
 ---
-twitter一下, 打个电话, 加个微信? 没事聊二句~
+twitter(cnscud)一下, 打个电话, 加个微信(bjfeiyun)? 没事聊二句~
 
