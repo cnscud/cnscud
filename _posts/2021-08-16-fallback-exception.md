@@ -118,14 +118,50 @@ public class DefaultFallback {
     请参考 https://docs.spring.io/spring-cloud-gateway/docs/current/reference/html/, 使用 FallbackHeaders 即可.
 
 ```yaml
-      - id: ingredients-fallback
-        uri: http://localhost:9994
-        predicates:
-        - Path=/fallback
-        filters:
-        - name: FallbackHeaders
-          args:
-            executionExceptionTypeHeaderName: Test-Header
+
+spring:
+  application:
+    name: ms-gateway
+  main:
+    allow-bean-definition-overriding: true
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    database: 0
+  cloud:
+    zookeeper:
+      connect-string: ${ZK_HOSTS:127.0.0.1:2181}
+      discovery:
+        enabled: true
+        preferIpAddress: true
+    loadbalancer:
+      ribbon:
+        enabled: false
+    gateway:
+      discovery:
+        locator:
+          lowerCaseServiceId: true
+          enabled: true
+      routes:
+        - id: testoutsidefallback
+          uri: lb://ms-fundmain-service
+          predicates:
+            - Path=/fundmain2/**
+          filters:
+            - StripPrefix=1
+            - name: CircuitBreaker
+              args:
+                name: fetchIngredients2
+                fallbackUri: forward:/externalfallback
+        - id: ingredients-fallback
+          uri: lb://ms-fundmain-service
+          predicates:
+            - Path=/externalfallback
+          filters:
+            - name: FallbackHeaders
+              args:
+                executionExceptionTypeHeaderName: Exception-Type
+                executionExceptionMessageHeaderName: Exception-Message
 ```
 
 支持四个字段:
@@ -133,6 +169,35 @@ public class DefaultFallback {
 * executionExceptionMessageHeaderName ("Execution-Exception-Message")
 * rootCauseExceptionTypeHeaderName ("Root-Cause-Exception-Type")
 * rootCauseExceptionMessageHeaderName ("Root-Cause-Exception-Message")
+
+实现示例 Fallback如下: (**注意, 此Controller不能放在网关项目里, 否则就要用内部Fallback才行**)
+
+```java
+@RestController
+public class ExternalFallback {
+
+    private static final Logger logger = LoggerFactory.getLogger(ExternalFallback.class);
+
+    private static final String EXECUTION_EXCEPTION_TYPE = "Exception-Type";
+    private static final String EXECUTION_EXCEPTION_MESSAGE = "Exception-Message";
+
+    @RequestMapping("/externalfallback")
+    @ResponseStatus
+    public Map<String, Object> externalfallback(HttpServletRequest request) {
+
+        Map<String, Object> map = new HashMap<>();
+        map.put("code", 5002);
+        map.put("msg", "服务异常");
+
+        map.put(EXECUTION_EXCEPTION_TYPE, request.getHeader(EXECUTION_EXCEPTION_TYPE));
+        map.put(EXECUTION_EXCEPTION_MESSAGE, request.getHeader(EXECUTION_EXCEPTION_MESSAGE));
+
+        return map;
+    }
+}
+
+```
+
 
 
 参考文章: 网上一篇关于Hystrix的文章
