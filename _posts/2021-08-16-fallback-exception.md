@@ -8,9 +8,11 @@ comments: true
 tags:
 - spring,gateway,fallback
 ---
+在Spring Cloud 2020新版里, 可以使用新版的 CircuitBreaker 断路器, 可以配置Fallback, 可以是内部的, 也可以是外部的Fallback.
+
 
 ## 内部 Fallback
-在Spring Cloud 2020新版里, 可以使用新版的 CircuitBreaker 断路器, 这里使用内部fallback, 配置如下:
+这里搭建一个内部fallback, 配置如下:
 
 ```yaml
 server:
@@ -198,6 +200,8 @@ public class ExternalFallback {
 
 ```
 
+这次注入了一个 HttpServletRequest, 然后获取保存在 Header 里面的信息, 拿到相应的异常.
 
 
-参考文章: 网上一篇关于Hystrix的文章
+
+
