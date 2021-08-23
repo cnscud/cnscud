@@ -13,7 +13,9 @@ tags:
 
 镜像已经发布在 https://hub.docker.com/r/cnscud/zookeeper 官方仓库.
 
-## 使用方法1: 命令行直接运行 (没参数的话和官方镜像一样, 也可以指定参数, 建议用docker-compose):
+## 使用方法1: 命令行直接运行 
+没参数的话和官方镜像一样, 也可以指定参数, 建议用docker-compose.
+
 ```shell
 docker run --name zk1 -d -p 2181:2181 cnscud/zookeeper:zk3.6-0.1
 ```
