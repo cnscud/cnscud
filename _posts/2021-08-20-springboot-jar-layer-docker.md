@@ -8,6 +8,7 @@ comments: true
 tags:
 - spring
 ---
+本文讲述了Spring boot 框架下的jar分层打包和war的分层打包.
 
 Spring Boot 现在支持分层打包技术了, 我们也来用一用, 加速Docker打包, 构建的时候速度也会非常快.
 
