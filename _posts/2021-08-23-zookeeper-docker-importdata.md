@@ -9,9 +9,9 @@ tags:
 - docker,zookeeper
 ---
 
-最近在做一个演示项目(https://github.com/cnscud/cavedemo), 自然为了方便, 也做了docker打包, 发现zookeeper的镜像没有导入初始化数据的功能, 于是自己做了一个镜像, 还是蛮简单的.
+最近在做一个演示项目 <https://github.com/cnscud/cavedemo>, 自然为了方便, 也做了docker打包, 发现zookeeper的镜像没有导入初始化数据的功能, 于是自己做了一个镜像, 还是蛮简单的.
 
-镜像已经发布在 https://hub.docker.com/r/cnscud/zookeeper 官方仓库.
+镜像已经发布在 <https://hub.docker.com/r/cnscud/zookeeper> 官方仓库.
 
 ## 使用方法1: 命令行直接运行 
 没参数的话和官方镜像一样, 也可以指定参数, 建议用docker-compose.
@@ -237,3 +237,5 @@ echo "[cnscud] Starting Zookeeper in foreground mode..."
 
 docker很好, 准备好内存和硬盘~!
 
+## 感谢
+感谢google, stackoverflow, withpy 以及我的家人.
