@@ -58,7 +58,7 @@ services:
 
 ## for init zookeeper data, you need update this file.
 ##
-## author: felix zhang https://github.com/cnscud/  2021.8.22
+## author: Felix Zhang<https://github.com/cnscud/>  2021.8.22
 ##
 ## please make sure the file 755
 ##
@@ -166,7 +166,7 @@ CMD ["zkServer.sh","start-foreground"]
 ```shell
 #!/bin/bash
 ## script for support import data with zookeeper
-## author: felix zhang 2021.8.22
+## author: Felix Zhang 2021.8.22
 ## please make sure the file 755
 
 # set -e
@@ -239,3 +239,7 @@ docker很好, 准备好内存和硬盘~!
 
 ## 感谢
 感谢google, stackoverflow, withpy 以及我的家人.
+
+## Star 
+如果觉得好, 就给个Star 吧: <https://github.com/cnscud/cnscud-docker>
+
