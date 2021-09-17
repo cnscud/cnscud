@@ -37,7 +37,7 @@ tags:
 
 ## 开始
 
-如果想快速开始请阅读这里 [Deployment](./deploy/) .
+如果想快速开始请阅读这里 [Deployment](https://kubernetes.github.io/ingress-nginx/deploy/) .
 
 
 # 常见问题FAQ - 版本升级到  networking.k8s.io/v1
