@@ -9,7 +9,8 @@ tags:
 - docker,buildx
 ---
 
-最近换了Macbook Pro m1电脑, 系统的架构变成了arm64, 软件重新安装了一大堆, 发现运行docker拉取镜像, 很多
+最近换了Macbook Pro m1电脑, 系统的架构变成了arm64, 软件重新安装了一大堆, 发现运行docker拉取镜像, 很多应用不支持arm64架构
+
 ```shell
 ➜  ~ docker pull mysql:5.6
 5.6: Pulling from library/mysql
